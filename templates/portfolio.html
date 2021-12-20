@@ -1,0 +1,43 @@
+{%extends "layout.html"%}
+    {% block content %}
+{%if title%}
+<title> Sam Sonter - {{title}} </title>
+{%else%}
+<title> Sam Sonter </title>
+{%endif%}
+
+
+<body> 
+<main class="main" itemtype=""  itemprop="Portfolio">
+    <section class="portfolio-content">
+        <div class="portfolio-section-content">
+            <div class="portfolio-section-content-text">
+                <h1 class="portfolio-section-content-text-title">
+                    {{title}}
+                </h1>
+                <p class="portfolio-section-content-text-description">
+                    {{description}}
+                    <p>Hey everyone. I wanted to give you an update on my videos. I will be releasing videos on threading and
+                        multiprocessing within the next week. Thanks so much for your patience. I currently have a temporary
+                        recording studio setup at my Airbnb that will allow me to record and edit the threading/multiprocessing
+                        videos. I am going to be moving into my new house in 10 days and once I have my recording studio setup then
+                        you can expect much faster video releases. I really appreciate how patient everyone has been while I go
+                        through this move, especially those of you who are contributing monthly through YouTube 
+                    </p>
+                </p>
+            </div>
+            <div class="portfolio-section-content-image">
+                <img src="/static/images/sam.jpg" alt="sam" class="img-responsive" usemap="#workmap">
+                <map name="workmap">
+                    <area shape="square" coords="34,44,270,350" alt="author" href="{{ url_for('about') }}">
+                </map>
+        </div>
+
+
+</main>
+
+</body>
+    
+
+{% endblock content %}
+

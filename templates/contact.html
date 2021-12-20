@@ -1,0 +1,26 @@
+{%extends "layout.html"%}
+{% block content %}
+{%if title%}
+<title> Sam Sonter - {{title}} </title>
+{%else%}
+<title> Sam Sonter </title>
+{%endif%}
+
+<main>
+    <section class="mainheader">
+
+        <form action="https://formsubmit.co/@hotmail.com" method="POST" class="mainform">
+            
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Message" required class="col-2" maxlength="200" cols="40"
+                rows="10"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</main>
+
+
+{% endblock content %}
+    
